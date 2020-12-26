@@ -25,13 +25,13 @@ public class DoublyLinkedListTest {
 		DoublyLinkedList<Integer> list = new DoublyLinkedList<Integer>();
 		int[] data = {1,2,3,4,5,6};
 		for(int i : data) list.addFirst(i);
-		assertEquals(list.peekFirst(), (Integer)6);
+		assertEquals(list.peekFirst().intValue(),6);
 	}
 	@Test
 	public void testPeekLast(){
 		DoublyLinkedList<Integer> list = new DoublyLinkedList<Integer>();
 		int[] data = {1,2,3,4,5,6};
 		for(int i : data) list.addLast(i);
-		assertEquals(list.peekFirst(), (Integer)1);
+		assertEquals(list.peekFirst().intValue(),1);
 	}
 }
