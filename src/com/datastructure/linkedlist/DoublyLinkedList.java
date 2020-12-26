@@ -56,22 +56,26 @@ public class DoublyLinkedList<T> implements Iterable<T> {
 		size++;
 	}
 	
+	public T peekFirst(){
+		if(isEmpty()) throw new RuntimeException("Empty List");
+		return head.data;
+	}
 
 	@Override
 	public Iterator<T> iterator() {
-		// TODO Auto-generated method stub
+		
 		return new Iterator(){
-
+			private Node<T> trav = head;
 			@Override
 			public boolean hasNext() {
-				// TODO Auto-generated method stub
-				return false;
+				return trav != null;
 			}
 
 			@Override
 			public Object next() {
-				// TODO Auto-generated method stub
-				return null;
+			T data = trav.data;
+			trav = trav.next;
+			return data;
 			}
 			
 		};
