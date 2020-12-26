@@ -20,7 +20,7 @@ public class DynamicArray<T> implements Iterable<T> {
 
 	}
 
-	public int len() {
+	public int size() {
 		return len;
 	}
 
